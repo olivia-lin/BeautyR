@@ -15,3 +15,12 @@ This function turns a colorful image into an embossment-type image. It replace e
 
 **Sketch**  
 This function detects discontinuities in brightness within an image, finds the boundaries of objects and transform the color image into a gray image with highlighting on these boundaries.
+
+## Similar Packages in R 
+
+Function `blurt` works as the same as our function `blur`, which can blur the image. However, in R, it applies a gaussian blur to an image. [blur](https://www.rdocumentation.org/packages/spatstat/versions/1.57-1/topics/blur)
+
+Function `grayscale` works as the same as our function `emboss`, which can change image's color to gray. [grayscale](https://rdrr.io/cran/imager/man/grayscale.html)
+
+Function `edge.detect` works as the same as our function `sketch`, which can detect image's edge. 
+It is achieved by using method "canny". [edge.detect](https://www.rdocumentation.org/packages/wvtool/versions/1.0/topics/edge.detect)

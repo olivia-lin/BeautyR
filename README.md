@@ -1,5 +1,8 @@
 # BeautyR
-Three filters for Image in R
+
+<img src="img/logo.png" align="right" height="200" width="200"/>
+
+Three filters for image in R.
 
 ## Contributors
 

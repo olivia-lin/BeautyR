@@ -29,9 +29,10 @@ This function calculates the bytes size of an image.
 
 ## Similar Packages in R
 
-Function `blurt` works as the same as our function `blur`, which can blur the image. However, in R, it applies a gaussian blur to an image. [blur](https://www.rdocumentation.org/packages/spatstat/versions/1.57-1/topics/blur)
+There are packages in R to compress images
+[magick package](https://cran.r-project.org/web/packages/magick/vignettes/intro.html)
 
-Function `grayscale` works as the same as our function `emboss`, which can change image's color to gray. [grayscale](https://rdrr.io/cran/imager/man/grayscale.html)
+Function `object.size` works as the same as our function `Calculate_Bytes` [object.size](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/object.size.html)
 
 Function `edge.detect` works as the same as our function `sketch`, which can detect image's edge.
 It is achieved by using method "canny". [edge.detect](https://www.rdocumentation.org/packages/wvtool/versions/1.0/topics/edge.detect)

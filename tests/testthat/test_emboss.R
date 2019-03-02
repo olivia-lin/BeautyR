@@ -1,14 +1,5 @@
 #! /usr/bin/env Rscript
 
-##################################################
-## Project: test_emboss.R
-## Date: Feb 28th, 2019
-## Author: Gilbert Lei, Jielin Yu, Olivia Lin
-## Script purpose: This scripts is an unit test for the emboss.R function
-##
-## Example: Rscript tests/testthat/test_emboss.R
-##################################################
-
 context("Emboss image")
 
 # initiate file paths 
@@ -54,36 +45,31 @@ exp_output <- array(c(c(0.5294118, 0.6078431, 0.6235294, 0.4470588,
                         0.5607843, 0.6039216, 0.5254902, 0.4352941)), 
                     dim=c(4, 4, 3))
 
-test_that("The image is not correctly embossed", {
+
+test_that("Checking the image is properly embossed", {
   emboss(test_input_file_path, test_output_file_path)
   test_output <- readJPEG(test_output_file_path)
+  # check whether the function can emboss image properly
   expect_equal(test_output, exp_output, tolerance=1e1)
 })
 
-test_that("The input path is not a string", {
-  expect_error(emboss(98999999, test_output_file_path))
+test_that("Checking input/output paths are valid", {
+  # check whether the function handles properly when input path is actually a number 
+  expect_error(emboss(98999999, test_output_file_path), 
+               "Please provide a string as the path for the input image file.", 
+               fixed = TRUE)
+  # check whether the function handles properly when output path is actually a number 
+  expect_error(emboss(test_input_file_path, 98999999), 
+               "Please provide a string as the path for the output image file.", 
+               fixed = TRUE) 
+  # check whether the function handles properly when input path is a string but invalid 
+  expect_error(emboss("./tests/hello/world.jpg", test_output_file_path), 
+               "Error: either the input file path does not exist or the file is in wrong format.", 
+               fixed = TRUE) 
+  # check whether the function handles properly when output path is a string but invalid
+  expect_error(emboss(test_input_file_path, "tests/hello/world_emboss.ppt"), 
+               "Error: either the output file path does not exist or the file is in wrong format.", 
+               fixed = TRUE)
 })
-
-test_that("The output path is not a string", {
-  expect_error(emboss(test_input_file_path, 98999999))
-})
-# 
-# 
-# test_that("Test whether the input is not a .jpg image", {
-#   expect_error(emboss(list(test_input)))
-#   expect_error(emboss("test_imgs/emboss/test_input.pdf", exp_output_file_path))
-# })
-# 
-# test_that("Test whether user provided too many arguments", {
-#   expect_error(emboss(test_input_file_path, exp_output_file_path, "hello", "world!"))
-# })
-# 
-# test_that("Test whether the input path does not exist", {
-#   expect_error(emboss("test_imgs/hello/world.jpg", test_output_file_path))
-# })
-# 
-# test_that("Test whether the output path does not exist", {
-#   expect_error(emboss(test_input_file_path, "test_imgs/hello/world.jpg"))
-# })
 
 cat("test_emboss.R unit test.....PASS!!!\n")

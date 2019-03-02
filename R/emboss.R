@@ -9,18 +9,26 @@
 #' @import jpeg
 #' @import testit
 #' 
-#' @examples 
-
 emboss <- function(input_path, output_path) { 
-  # require(jpeg)
-  # require(testit)
+
+  # make sure input_path is a string
+  if (!is.character(input_path)) {
+    stop("Please provide a string as the path for the input image file.")
+  }
   
-  # exception handling
-  assert("Please provide a string as the path for the input image file.", is.character(input_path))
-  assert("Please provide a string as the path for the output image file.", is.character(output_path))
+  # make sure output_path is a string
+  if (!is.character(output_path)) {
+    stop("Please provide a string as the path for the output image file.")
+  }
   
   # read in the image that needs to be embossed
-  input_img <- readJPEG(input_path) 
+  tryCatch(
+    input_img <- readJPEG(input_path),
+    # if unable to open, throw an error 
+    error = function(err) {
+      stop("Error: either the input file path does not exist or the file is in wrong format.") 
+    }
+  )
   
   # store image height and width 
   h <- dim(input_img)[1]    # number of rows 
@@ -77,6 +85,12 @@ emboss <- function(input_path, output_path) {
     }
   }
   
-  writeJPEG(output_img, output_path, quality=1) 
+  tryCatch(
+    writeJPEG(output_img, output_path, quality=1), 
+    # if unable to open, throw an error 
+    error = function(err) {
+      stop("Error: either the output file path does not exist or the file is in wrong format.")
+    }
+  )
   
 }

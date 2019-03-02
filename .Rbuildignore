@@ -1,2 +1,7 @@
+^\.ipynb_checkpoints$
+^img$
+^LICENSE\.md$
+^CONTRIBUTING\.md$
+^CODE_OF_CONDUCT\.md$
 ^.*\.Rproj$
 ^\.Rproj\.user$

@@ -10,8 +10,7 @@
 #' @import png
 #' @import testthat
 #' 
-#' @examples 
-#' flip("test_imgs/flip/test_input.png","test_imgs/flip/test_output.png","v")
+
 
 flip<-function(input_path,output_path,direction){
   

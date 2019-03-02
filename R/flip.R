@@ -1,6 +1,3 @@
-library(png)
-library(testthat)
-
 #' Flip 
 #' 
 #' @param input_path string, path for the input png file 
@@ -8,7 +5,10 @@ library(testthat)
 #' @param direction string, direction of flip 
 #' 
 #' @return a png file at the output path 
-#' export 
+#' @export 
+#' 
+#' @import png
+#' @import testthat
 #' 
 #' @examples 
 #' flip("test_imgs/flip/test_input.png","test_imgs/flip/test_output.png","v")

@@ -61,8 +61,8 @@ img_v_exp <- array(c(c1_v,c2_v,c3_v,c4_v,c5_v,c6_v,c7_v,c8_v,c9_v),dim = c(3,3,3
 
 # Test function 
 
-flip_h <- flip(test_input_file_path,test_output_file_path_h,"h")
-flip_v <- flip(test_input_file_path,test_output_file_path_v,"v")
+#flip_h <- flip(test_input_file_path,test_output_file_path_h,"h")
+#flip_v <- flip(test_input_file_path,test_output_file_path_v,"v")
 
 #test case 1 
 test_that("Function reuslt is the same as the expected result",{
@@ -73,9 +73,10 @@ test_that("Function reuslt is the same as the expected result",{
 })
 
 test_that("Function reuslt is the same as the expected result",{
+  flip(test_input_file_path,test_output_file_path_v,"v")
   test_output <- readPNG(test_output_file_path_v)
   expect_equal(test_output,img_v_exp)
-
+  
 })
 
 # test cacse 2 

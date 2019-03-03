@@ -24,13 +24,9 @@ get_image_details <- function(input_path, detail = 'All'){
   
   w <- dim(img)[2]
   
-  h <- 3
-  
-  w <- 6
-  
-  
+
   if (w<=h){
-    w <- w
+    x <- w
     y <- h
   } else{
     x <- h
@@ -39,8 +35,8 @@ get_image_details <- function(input_path, detail = 'All'){
   
   gcd <- 1
   
-  if (x %% y == 0){
-    gcd <- y
+  if (y %% x == 0){
+    gcd <- x
   } else{
     for (i in ceiling(y/2):1) {
       if (x %% i == 0 & y %% i == 0) {

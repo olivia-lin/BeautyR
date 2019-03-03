@@ -55,9 +55,9 @@ input_2 <- array(c(c(10, 12, 210,
 
 
 # save test input image matrix as a file
-writeImage(input_1, "test_imgs/get_image_details/input_1.png")
+writePNG(input_1, "test_imgs/get_image_details/input_1.png")
 
-writeImage(input_2, "test_imgs/get_image_details/input_2.png")
+writePNG(input_2, "test_imgs/get_image_details/input_2.png")
 
 
 
@@ -85,20 +85,45 @@ exp_output_1 <-  tribble(
   "3 x 6", 3, 6, "1 : 2")
 
 exp_output_2 <-  tribble(
+  ~Dimension, ~Width, ~Height, ~AspectRatio,
+  "5 x 3", 5, 3, "5 : 3")
+
+exp_output_21 <-  tribble(
+  ~Dimension,
+  "5 x 3")
+
+exp_output_22 <-  tribble(
+   ~Width,
+   5)
+
+exp_output_23 <-  tribble(
+  ~Height,
+  3)
+
+exp_output_24 <-  tribble(
    ~AspectRatio,
    "5 : 3")
 
 
 test_that("Test whether the returned details are correct", {
-  test_output <- get_image_details(test_input_1)
-  expect_equal(test_output, exp_output_1)
+  
+  expect_equal(get_image_details(test_input_1), exp_output_1)
+  
+  expect_equal(get_image_details(test_input_1, "All"), exp_output_1)
+  
+  expect_equal(get_image_details(test_input_2), exp_output_2)
+  
+  expect_equal(get_image_details(test_input_2, "All"), exp_output_2)
+  
+  expect_equal(get_image_details(test_input_2, "Dimension"), exp_output_21)
+  
+  expect_equal(get_image_details(test_input_2, "Width"), exp_output_22)
+  
+  expect_equal(get_image_details(test_input_2, "Height"), exp_output_23)
+  
+  expect_equal(get_image_details(test_input_2, "AspectRatio"), exp_output_24)
 })
 
-
-test_that("Test whether the returned details are correct", {
-  test_output <- get_image_details(test_input_2, "AspectRatio")
-  expect_equal(test_output, exp_output_2)
-})
 
 cat("test_get_image_details.R unit test.....PASS!!!\n")
 

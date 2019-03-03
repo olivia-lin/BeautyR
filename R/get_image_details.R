@@ -1,6 +1,7 @@
 library(png)
 library(testit)
-library(dplyr)
+library(tibble)
+
 
 
 get_image_details <- function(input_path, detail = 'All'){
@@ -24,6 +25,7 @@ get_image_details <- function(input_path, detail = 'All'){
   
   w <- dim(img)[2]
   
+
 
   if (w<=h){
     x <- w

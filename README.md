@@ -73,10 +73,21 @@ devtools::install_github("UBC-MDS/BeautyR", build_vignettes = TRUE)
 
 ## Run Tests
 
-TBD
-
+```
+library(devtools)
+load_all()
+test()
+```
+NEED A PIC
 
 ## Usage
+```
+library(covr)
+
+report()
+```
+
+![](img/coverageR.png)
 
 #### Emboss an image
 ```

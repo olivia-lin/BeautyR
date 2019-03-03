@@ -19,9 +19,9 @@ library(tibble)
 
 
 # initiate file paths
-test_input_1 <- "test_imgs/get_image_details/input_1.png"
+test_input_1 <- "./test_imgs/get_image_details/input_1.png"
 
-test_input_2 <- "test_imgs/get_image_details/input_2.png"
+test_input_2 <- "./test_imgs/get_image_details/input_2.png"
 
 
 # prepare test input image matrix
@@ -56,15 +56,15 @@ input_2 <- array(c(c(10, 12, 210,
 
 
 # save test input image matrix as a file
-writePNG(input_1, "test_imgs/get_image_details/input_1.png")
+writePNG(input_1, "./test_imgs/get_image_details/input_1.png")
 
-writePNG(input_2, "test_imgs/get_image_details/input_2.png")
+writePNG(input_2, "./test_imgs/get_image_details/input_2.png")
 
 
 
 # tests 
 test_that("Test whether the input is not a .png image", {
-  expect_error(get_image_details("test_imgs/get_image_details/input.docs"))
+  expect_error(get_image_details("./test_imgs/get_image_details/input.docs"))
 })
 
 test_that("Test whether user provided too many arguments", {
@@ -76,7 +76,7 @@ test_that("Test whether the input path is not a string", {
 })
 
 test_that("Test whether the input path does not exist", {
-  expect_error(get_image_details("test_imgs/hello/world.jpg"))
+  expect_error(get_image_details("./test_imgs/hello/world.jpg"))
 })
 
 

@@ -25,9 +25,7 @@ get_image_details <- function(input_path, detail = 'All'){
   
   w <- dim(img)[2]
   
-  h <- 1
-  w <- 1
-  
+
 
   if (w<=h){
     x <- w

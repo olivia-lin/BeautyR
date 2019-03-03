@@ -80,11 +80,11 @@ test_that("Test whether the input path does not exist", {
 })
 
 
-w1 <- 3
-h1 <- 6
+w1 <- as.integer(3)
+h1 <- as.integer(6)
 
-w2 <- 5
-h2 <- 3
+w2 <- as.integer(5)
+h2 <- as.integer(3)
 
 # prepare expected output image matrix
 exp_output_1 <-  tribble(
@@ -94,6 +94,7 @@ exp_output_1 <-  tribble(
 exp_output_2 <-  tribble(
   ~Dimension, ~Width, ~Height, ~AspectRatio,
   "5 x 3", w2, h2, "5 : 3")
+
 
 exp_output_21 <-  tribble(
   ~Dimension,

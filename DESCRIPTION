@@ -8,13 +8,13 @@ Authors@R: c(person(given = "Gilbert",
              person(given = "Jessie",
                     family = "Yu",
                     role = c("aut"),
-                    email = "junxiong.lei@gmail.com"), 
+                    email = "jielinyu1997@gmail.com"), 
              person(given = "Olivia",
                     family = "Lin",
                     role = c("aut"),
                     email = "junxiong.lei@gmail.com"))
 Description: This package provides three functions for image processing: emboss, flip and get_image_details.  
-License: GPL-3.0-or-later
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
@@ -23,6 +23,7 @@ Imports:
   jpeg,
   png, 
   testthat,
-  testit
+  testit, 
+  OpenImageR, 
+  tibble
 URL: https://github.com/UBC-MDS/BeautyR
-

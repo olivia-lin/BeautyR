@@ -70,6 +70,8 @@ Then, run the following command line in the R console:
 ```
 devtools::install_github("UBC-MDS/BeautyR", build_vignettes = TRUE)
 ```
+![](img/installation.png)
+
 
 ## Run Tests
 

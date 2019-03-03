@@ -55,9 +55,9 @@ input_2 <- array(c(c(10, 12, 210,
 
 
 # save test input image matrix as a file
-writeImage(input_1, "test_imgs/get_image_details/input_1.png")
+writePNG(input_1, "test_imgs/get_image_details/input_1.png")
 
-writeImage(input_2, "test_imgs/get_image_details/input_2.png")
+writePNG(input_2, "test_imgs/get_image_details/input_2.png")
 
 
 
@@ -95,7 +95,7 @@ test_that("Test whether the returned details are correct", {
 })
 
 
-test_that("Test whether the returned details are correct", {
+test_that("Test whether the returned details are correct when user give specific detail name", {
   test_output <- get_image_details(test_input_2, "AspectRatio")
   expect_equal(test_output, exp_output_2)
 })

@@ -115,10 +115,10 @@ report()
 
 ## Where does this package fit into the R ecosystem
 
-There are packages in R to compress images
-[magick package](https://cran.r-project.org/web/packages/magick/vignettes/intro.html)
+While there are many R packages that provide image processing functions such as blurring, sharpening, grayscalling, etc., we didn't find any existing R package that provide an image emboss function. As such, we decided to develop an emboss tool that could process an image file and output the embossed version of it. At the same time, we wanted to gain deeper understanding of neural network by coding an emboss filter algorithm.   
 
-Function `object.size` works as the same as our function `Calculate_Bytes` [object.size](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/object.size.html)
 
-Function `edge.detect` works as the same as our function `sketch`, which can detect image's edge.
-It is achieved by using method "canny". [edge.detect](https://www.rdocumentation.org/packages/wvtool/versions/1.0/topics/edge.detect)
+For image flipping (mirroring), there are several packages available in the R ecosystem. One example is the `mirror` function from [imager](https://cran.r-project.org/web/packages/imager/vignettes/gettingstarted.html) package. However, imager's `mirror` function works on an array, instead of an image file saved on a computer. So we decided to develop a `flip` tool that can read in a real image file and save the flipped image as another real file on computer.
+
+
+For getting image details, we didn't find any existing package/function that could work as we expected. We believe our `get_image_details` will be a good function to have for the R ecosystem.

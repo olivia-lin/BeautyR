@@ -12,7 +12,7 @@ Authors@R: c(person(given = "Gilbert",
              person(given = "Olivia",
                     family = "Lin",
                     role = c("aut"),
-                    email = "junxiong.lei@gmail.com"))
+                    email = "olivia.xinyi.lin@gmail.com"))
 Description: This package provides three functions for image processing: emboss, flip and get_image_details.  
 License: MIT + file LICENSE
 Encoding: UTF-8

@@ -86,7 +86,6 @@ library(covr)
 
 report()
 ```
-
 ![](img/coverageR.png)
 
 #### Emboss an image

@@ -2,7 +2,9 @@
 
 export(emboss)
 export(flip)
+export(get_image_details)
 import(jpeg)
 import(png)
 import(testit)
 import(testthat)
+import(tibble)

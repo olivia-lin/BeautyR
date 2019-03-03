@@ -19,6 +19,3 @@ a png file at the output path
 \description{
 Flip
 }
-\examples{
-flip("test_imgs/flip/test_input.png","test_imgs/flip/test_output.png","v")
-}

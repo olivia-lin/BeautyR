@@ -1,31 +1,22 @@
-library(png)
-library(testit)
-library(tibble)
-
-
-
+#' This function returns details about the image, such as dimension, width, height, and image ratio.
+#'
+#' @param input_path (string) ->  The file path for the image we want to return information of.
+#' @param detail (string) -> The name of attribute that the function will return. Default set to be 'All'. Available choices are: 'All', 'Dimension', 'Width', 'Height', and 'Aspect Ratio'.
+#'
+#' @return A data frame that has the detailed information about input image.
+#' @export
+#'
+#' @import png 
+#' @import testit
+#' @import tibble
+#' 
 get_image_details <- function(input_path, detail = 'All'){
-  
-  #  This function returns details about the image, such as dimension, width, height, and image ratio.
-  #  
-  #   Parameters
-  #   ---------------------------------------
-  #   test_input_file_path (string) ->  The file path for the image we want to return information of.
-  #       
-  #   detail (string) -> The name of attribute that the function will return. Default set to be 'All'.
-  #                       Available choices are: 'All', 'Dimension', 'Width', 'Height', and 'Aspect Ratio'.
-  #
-  #   Return
-  #   ---------------------------------------
-  #   A data frame that has the detailed information about input image.
   
   img <- readPNG(input_path)
   
   h <- dim(img)[1]
   
   w <- dim(img)[2]
-  
-
 
   if (w<=h){
     x <- w
@@ -48,23 +39,19 @@ get_image_details <- function(input_path, detail = 'All'){
     }
   }
   
-  
   dimension <- paste(c(w, "x", h), collapse = " ")
   
   ratio <- paste(c(w/gcd, ":", h/gcd), collapse = " ")
-  
   
   details <- tribble(
     ~Dimension, ~Width, ~Height, ~AspectRatio,
     dimension, w, h, ratio
   )
   
-  
   if (detail == 'All'){
     return(details)
   } else{
     return(details[detail])
   }
-  
   
 }

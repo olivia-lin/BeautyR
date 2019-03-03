@@ -66,7 +66,7 @@ Firstly, check if devtools has been installed on your computer. If not, open an 
 install.packages("devtools") to install devtools.
 ```
 
-Then, run the following command line in the R console: 
+Then, run the following command line in the R console:
 ```
 devtools::install_github("UBC-MDS/BeautyR", build_vignettes = TRUE)
 ```
@@ -78,15 +78,9 @@ library(devtools)
 load_all()
 test()
 ```
-NEED A PIC
+![](img/test_result.JPG)
 
 ## Usage
-```
-library(covr)
-
-report()
-```
-![](img/coverageR.png)
 
 #### Emboss an image
 ```
@@ -108,6 +102,14 @@ report()
       Dimension	  Width	  Height	   Aspect Ratio
 Image	780 x 439	  780	    439	      780 : 439
 ```
+
+#### To check code coverage
+```
+library(covr)
+
+report()
+```
+![](img/coverageR.png)
 
 ## Where does this package fit into the R ecosystem
 

@@ -18,8 +18,58 @@ knitr::opts_chunk$set(
 
 Welcome to BeautyR! This is a small package that will provide image processing capabilities. The package contains three functions. The instructions below will explain the use of these functions. 
 
-First, load the package. 
+#### Function 1:`emboss`
+This function turns a colorful image into an embossment-type image. 
+
+*Parameters:*  
+- input_path: `character` The file path for the original image we want to emboss.  
+- output_path: `character` The file path to save the embossed image.
+
+*Return:*   
+- An embossed image will be saved in output path.
+
+*Example:*  
 ```{r}
 library(BeautyR) 
+emboss("Google-logo.jpg", "Google-logo_emboss.jpg")
 ```
 
+#### Function 2: `flip`
+
+This function flips the images either vertically or horizontally and save it to the output path.
+
+*Parameters:*  
+- input_path: `character` The file path for the original image we want to flip.
+- output_path: `character`  The file path to save the flipped image.
+- direction: `character` Direction to flip, "h" or "v", which represents horizontal and vertical respectively.
+
+*Return:*  
+- An flipped image file will be saved in output path.
+
+*Example:*  
+```{r}
+library(BeautyR) 
+flip("Google-logo.jpg", "Google-logo_flip.jpg", "h")
+```
+
+#### Function 3: `get_image_details`
+
+This function returns attributes of the input image, such as dimension, width, height and aspect ratio. Users can choose the attributes they want to look at by specifying the names of attributes.
+
+*Parameters:*  
+- input_path: `character` The file path for the image we want to return information of.
+- detail: `character` The name of attribute that the function will return. Default set to be 'All'. Available choices are: 'All', 'Dimension', 'Width', 'Height', and 'Aspect Ratio'.
+
+*Return:*  
+- A data frame that has the detailed information about input image.
+
+*Example:*  
+```{r}
+library(BeautyR) 
+get_image_details("Google-logo.jpg")
+```
+
+#### Created by
+[Gilbert Lei](https://github.com/gilbertlei)  
+[Jielin Yu](https://github.com/jielinyu)  
+[Olivia Lin](https://github.com/olivia-lin)  

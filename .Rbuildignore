@@ -1,5 +1,7 @@
 ^Meta$
 ^doc$
+^codecov\.yml$
+^\.travis\.yml$
 ^\.ipynb_checkpoints$
 ^img$
 ^LICENSE\.md$

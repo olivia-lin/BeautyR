@@ -29,5 +29,6 @@ Imports:
 URL: https://github.com/UBC-MDS/BeautyR
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown, 
+    covr
 VignetteBuilder: knitr

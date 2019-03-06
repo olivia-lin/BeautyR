@@ -1,5 +1,9 @@
 # BeautyR
 
+[![Travis build status](https://travis-ci.org/UBC-MDS/BeautyR.svg?branch=master)](https://travis-ci.org/UBC-MDS/BeautyR)
+
+[![Coverage status](https://codecov.io/gh/UBC-MDS/BeautyR/branch/master/graph/badge.svg)](https://codecov.io/github/UBC-MDS/BeautyR?branch=master)
+
 <img src="img/logo.png" align="right" height="200" width="200"/>
 
 Image processing in R.
@@ -80,9 +84,12 @@ library(devtools)
 load_all()
 test()
 ```
+
 ![](img/test_result.JPG)
 
 ## Usage
+
+![](img/Google-logo.jpg)
 
 #### Emboss an image
 ```
@@ -90,20 +97,24 @@ test()
 >> emboss("img/Google-logo.jpg", "img/Google-logo_emboss.jpg")
 ```
 
+![](img/Google-logo_emboss.jpg)
+
 #### Flip an image  
 ```
 >> library(BeautyR)
->> flip("img/Google-logo.jpg", "img/Google-logo_flip.jpg", "h")  
+>> flip("img/Google.png", "img/Google_flip.png", "h")  
+>> flip("img/Google.png", "img/Google_flip_v.png", "v")  
 ```
+
+![](img/Google_flip.png)
+![](img/Google_flip_v.png)
 
 #### Get details of an image  
 ```
 >> library(BeautyR)
->> get_image_details("img/Google-logo.jpg")
-
-      Dimension	  Width	  Height	   Aspect Ratio
-Image	780 x 439	  780	    439	      780 : 439
+>> get_image_details("img/Google.png")
 ```
+![](img/sample_get_details.png)
 
 #### To check code coverage
 ```

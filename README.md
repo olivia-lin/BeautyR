@@ -101,7 +101,7 @@ test()
 >> flip("img/Google-logo.png", "img/Google-logo_flip.png", "h")  
 ```
 
-![](img/Google-logo_flip.jpg)
+![](img/Google-logo_flip.png)
 
 #### Get details of an image  
 ```

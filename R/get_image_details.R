@@ -12,6 +12,9 @@
 #' 
 get_image_details <- function(input_path, detail = 'All'){
   
+  assert("Please provide a string as the path for the input image file.", is.character(input_path))
+  assert("Invalid input for detail", detail %in% c('All', 'Dimension', 'Width', 'Height', 'AspectRatio'))
+  
   img <- readPNG(input_path)
   
   h <- dim(img)[1]

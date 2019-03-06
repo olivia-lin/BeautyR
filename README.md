@@ -103,9 +103,11 @@ test()
 ```
 >> library(BeautyR)
 >> flip("img/Google.png", "img/Google_flip.png", "h")  
+>> flip("img/Google.png", "img/Google_flip_v.png", "v")  
 ```
 
 ![](img/Google_flip.png)
+![](img/Google_flip_v.png)
 
 #### Get details of an image  
 ```

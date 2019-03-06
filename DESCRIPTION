@@ -28,4 +28,7 @@ Imports:
   tibble
 URL: https://github.com/UBC-MDS/BeautyR
 Suggests: 
+    knitr,
+    rmarkdown, 
     covr
+VignetteBuilder: knitr

@@ -1,0 +1,25 @@
+---
+title: "BeautyR"
+author: "Gilbert Lei, Jessie Yu, Olivia Lin"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{BeautyR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}{inputenc}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Welcome to BeautyR! This is a small package that will provide image processing capabilities. The package contains three functions. The instructions below will explain the use of these functions. 
+
+First, load the package. 
+```{r}
+library(BeautyR) 
+```
+

@@ -1,5 +1,9 @@
 # BeautyR
 
+[![Travis build status](https://travis-ci.org/UBC-MDS/BeautyR.svg?branch=master)](https://travis-ci.org/UBC-MDS/BeautyR)
+
+[![Coverage status](https://codecov.io/gh/UBC-MDS/BeautyR/branch/master/graph/badge.svg)](https://codecov.io/github/UBC-MDS/BeautyR?branch=master)
+
 <img src="img/logo.png" align="right" height="200" width="200"/>
 
 Image processing in R.

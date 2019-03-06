@@ -89,7 +89,7 @@ test()
 
 ## Usage
 
-![](img/Google-logo.png)
+![](img/Google-logo.jpg)
 
 #### Emboss an image
 ```

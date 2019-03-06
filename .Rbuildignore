@@ -1,3 +1,5 @@
+^Meta$
+^doc$
 ^\.ipynb_checkpoints$
 ^img$
 ^LICENSE\.md$

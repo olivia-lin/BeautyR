@@ -27,3 +27,7 @@ Imports:
   OpenImageR, 
   tibble
 URL: https://github.com/UBC-MDS/BeautyR
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

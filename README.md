@@ -80,9 +80,12 @@ library(devtools)
 load_all()
 test()
 ```
+
 ![](img/test_result.JPG)
 
 ## Usage
+
+![](img/Google-logo.png)
 
 #### Emboss an image
 ```
@@ -90,16 +93,20 @@ test()
 >> emboss("img/Google-logo.jpg", "img/Google-logo_emboss.jpg")
 ```
 
+![](img/Google-logo_emboss.jpg)
+
 #### Flip an image  
 ```
 >> library(BeautyR)
->> flip("img/Google-logo.jpg", "img/Google-logo_flip.jpg", "h")  
+>> flip("img/Google-logo.png", "img/Google-logo_flip.png", "h")  
 ```
+
+![](img/Google-logo_flip.jpg)
 
 #### Get details of an image  
 ```
 >> library(BeautyR)
->> get_image_details("img/Google-logo.jpg")
+>> get_image_details("img/Google-logo.png")
 
       Dimension	  Width	  Height	   Aspect Ratio
 Image	780 x 439	  780	    439	      780 : 439

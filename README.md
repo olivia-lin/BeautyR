@@ -124,6 +124,14 @@ report()
 ```
 ![](img/coverageR.png)
 
+## Package dependencies  
+- jpeg  
+- png   
+- OpenImageR  
+- tibble  
+- testthat  
+- testit  
+
 ## Where does this package fit into the R ecosystem
 
 While there are many R packages that provide image processing functions such as blurring, sharpening, grayscalling, etc., we didn't find any existing R package that provide an image emboss function. As such, we decided to develop an emboss tool that could process an image file and output the embossed version of it. At the same time, we wanted to gain deeper understanding of neural network by coding an emboss filter algorithm.   

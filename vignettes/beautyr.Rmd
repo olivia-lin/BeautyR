@@ -31,7 +31,7 @@ This function turns a colorful image into an embossment-type image.
 *Example:*  
 ```
 library(BeautyR) 
-emboss("../img/Google-logo.jpg", "./img/Google-logo_emboss.jpg")
+emboss("../img/Google-logo.jpg", "../img/Google-logo_emboss.jpg")
 ```
 
 #### Function 2: `flip`

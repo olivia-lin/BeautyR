@@ -31,7 +31,7 @@ This function turns a colorful image into an embossment-type image.
 *Example:*  
 ```
 library(BeautyR) 
-emboss("./img/Google-logo.jpg", "./img/Google-logo_emboss.jpg")
+emboss("../img/Google-logo.jpg", "./img/Google-logo_emboss.jpg")
 ```
 
 #### Function 2: `flip`
@@ -49,7 +49,7 @@ This function flips the images either vertically or horizontally and save it to 
 *Example:*  
 ```
 library(BeautyR) 
-flip("./img/Google.png", "./img/Google_flip_h.png", "h")
+flip("../img/Google.png", "../img/Google_flip_h.png", "h")
 ```
 
 #### Function 3: `get_image_details`
@@ -66,7 +66,7 @@ This function returns attributes of the input image, such as dimension, width, h
 *Example:*  
 ```
 library(BeautyR) 
-get_image_details("./img/Google.png")
+get_image_details("../img/Google.png")
 ```
 
 #### Created by

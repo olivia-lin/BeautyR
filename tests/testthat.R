@@ -1,6 +1,5 @@
 library(testthat)
+library(jpeg)
 library(BeautyR)
-library(testit)
-library(tableMatrix)
 
 test_check("BeautyR")

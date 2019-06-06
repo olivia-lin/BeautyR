@@ -1,0 +1,7 @@
+Meta
+doc
+inst/doc
+.ipynb_checkpoints/
+tmp/
+glei_test.ipynb
+.Rproj.user
